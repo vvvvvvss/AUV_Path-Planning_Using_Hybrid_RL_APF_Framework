@@ -1,0 +1,37 @@
+# ──────────────────────────────────────────────────────────────────────────────
+# requirements.txt
+# Adaptive RL-APF Framework for Energy-Efficient AUV Path Planning
+# Underwater Robotics Conference 2026
+#
+# Install:
+#   pip install -r requirements.txt
+#
+# GPU (CUDA 12+):
+#   pip install torch --index-url https://download.pytorch.org/whl/cu121
+#   pip install -r requirements.txt
+#
+# Tested on Python 3.10, 3.11, 3.12
+# ──────────────────────────────────────────────────────────────────────────────
+
+# ── Core simulation ───────────────────────────────────────────────────────────
+gymnasium==1.3.0          # OpenAI Gymnasium — environment interface
+numpy==2.4.4              # array operations, random seeding
+
+# ── Deep learning ─────────────────────────────────────────────────────────────
+torch==2.13.0             # PyTorch — neural network backend (CPU or CUDA)
+stable-baselines3==2.9.0  # SB3 — PPO, DQN implementations
+
+# ── Visualisation ─────────────────────────────────────────────────────────────
+matplotlib==3.10.8        # publication figures (Figs 1-6)
+plotly==7.0.0             # interactive 3-D trajectory viewer (optional)
+
+# ── Scientific computing ──────────────────────────────────────────────────────
+scipy==1.17.1             # stats, interpolation (used in analysis)
+
+# ── Logging & monitoring ──────────────────────────────────────────────────────
+tensorboard==2.21.0       # training curve visualisation (optional)
+
+# ── Indirect dependencies (auto-installed, listed for reproducibility) ────────
+# torch pulls: filelock, jinja2, networkx, sympy, fsspec, typing-extensions
+# sb3  pulls:  cloudpickle, rich, tqdm, pandas, optree
+# matplotlib pulls: pillow, contourpy, cycler, fonttools, kiwisolver, pyparsing

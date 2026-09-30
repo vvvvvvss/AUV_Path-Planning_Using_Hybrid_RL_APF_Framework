@@ -1,0 +1,98 @@
+{
+  "config": {
+    "n_eval_episodes": 100,
+    "eval_seed": 1000,
+    "ppo_timesteps": 500000,
+    "dqn_timesteps": 500000,
+    "n_envs_ppo": 4,
+    "train_seed": 0,
+    "save_dir": "./results/models",
+    "results_dir": "./results",
+    "device": "cuda",
+    "verbose": 1,
+    "log_freq": 50,
+    "fast_mode": false,
+    "fast_timesteps": 30000,
+    "fast_eval_episodes": 20,
+    "methods": [
+      "apf",
+      "astar",
+      "rrtstar",
+      "pure_dqn",
+      "pure_ppo",
+      "dqn_apf",
+      "ppo_apf"
+    ]
+  },
+  "results": [
+    {
+      "method": "APF",
+      "success_rate": 0.14,
+      "mean_energy_kj": 0.5014338596822335,
+      "collision_rate": 0.0,
+      "mean_steps": 103.75,
+      "std_energy_kj": 0.00614648038882725,
+      "std_success": 0.34698703145794946,
+      "n_episodes": 100,
+      "converged_episode": null,
+      "elapsed_s": 6.421349099997315
+    },
+    {
+      "method": "A*",
+      "success_rate": 0.28,
+      "mean_energy_kj": 0.46084663469479864,
+      "collision_rate": 0.14,
+      "mean_steps": 127.57,
+      "std_energy_kj": 0.09105830099258985,
+      "std_success": 0.44899888641287283,
+      "n_episodes": 100,
+      "converged_episode": null,
+      "elapsed_s": 36.372818499999994
+    },
+    {
+      "method": "RRT*",
+      "success_rate": 0.0,
+      "mean_energy_kj": 0.45409125955268637,
+      "collision_rate": 0.14,
+      "mean_steps": 125.7,
+      "std_energy_kj": 0.08594030626216041,
+      "std_success": 0.0,
+      "n_episodes": 100,
+      "converged_episode": null,
+      "elapsed_s": 198.61782479999965
+    },
+    {
+      "method": "Pure DQN",
+      "success_rate": 0.0,
+      "mean_energy_kj": 0.48750468750000003,
+      "collision_rate": 0.06,
+      "mean_steps": 157.98,
+      "n_episodes": 100,
+      "converged_episode": null,
+      "elapsed_s": 31.88179510000191
+    },
+    {
+      "method": "Pure PPO",
+      "success_rate": 0.0,
+      "mean_energy_kj": 0.45380034863351165,
+      "collision_rate": 0.19,
+      "mean_steps": 104.79,
+      "n_episodes": 100,
+      "converged_episode": null,
+      "elapsed_s": 5.39486859999306
+    },
+    {
+      "method": "PPO-APF (adaptive \u03b1)",
+      "success_rate": 0.13,
+      "mean_energy_kj": 0.49978351615422834,
+      "collision_rate": 0.0,
+      "mean_steps": 107.05,
+      "mean_alpha": 0.5433874234008378,
+      "mean_alignment": 0.9864856917024971,
+      "n_episodes": 100,
+      "converged_episode": null,
+      "elapsed_s": 6.903167399999802
+    }
+  ],
+  "timestamp": 1788746341
+}
